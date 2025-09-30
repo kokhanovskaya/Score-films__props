@@ -1,6 +1,8 @@
 import Star from "./Star";
-
-export default function Score({ score = 0 }) {
+type ScoreProps = {
+  score?: number;
+};
+export default function Score({ score = 0 }: ScoreProps) {
   if (typeof score !== "number" || score <= 0 || score >= 5) {
     return null;
   }
